@@ -1,7 +1,7 @@
-# Jednoduchá webová aplikace na procvičení fyzikálních vzorečků.
+# Jednoduchá webová aplikace na procvičení vlajek zemí.
 
- **Cíl projektu:** Vytvořit jednoduchou webovou aplikaci na procvičování fyziky.
+ **Cíl projektu:** Vytvořit jednoduchou webovou aplikaci na procvičování vlajek zemí.
 
- **Použité technologie:** Svelte
+ **Použité technologie:** html css
  
- **Obtížnost:** relativně lehká
+ **Obtížnost:** střední
