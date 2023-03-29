@@ -1,0 +1,32 @@
+h1{
+    color: blue;
+    text-align: center;
+}
+.quizz {
+    display: grid;
+    place-items: center;
+    border: yellow;
+}
+
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-form{
+    
+justify-content: center;
+display: flex;
+margin: 40px 50px;
+padding: 30px;
+}
+
+
+.btn-potvrdit button{
+    align-self: center;
+}
+
+.top{
+    background-color: whitesmoke ;
+}
