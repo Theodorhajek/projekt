@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
-    <title>Samíkovo Procvičování</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Samíkovo Procvičování</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
+  <div>
 
-
-    <div class="quizz">
-        <h1>Jaká je toto vlajka?</h1>
-
-
-        <img src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300">
-
-
-        <form class="center-form">
-            <label for="flagName">Zadejte název vlajky: </label><br>
-            <input type="text" id="flagName" name="flagName"><br>
-            <button id="btn-submit">
-                potvrdit
-            </button><br>
-            
-        </form>
-        
-        <p id="vyhodnoceni"></p>
-        
-        <script src="main.js"></script>
-
+    <div id="home-box">
+      <h3>Kvíz na vlajky zemí</h3>
+      <button onclick="hideCard()" class="btn-start"> začít hrát </button>
 
     </div>
 
 
+
+    <div class="quizz">
+      <h3>Jaká je toto vlajka?</h3>
+
+      <img src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300" />
+
+      <form class="center-form" id="mainForm">
+
+        <label for="flagName">Zadejte název vlajky: </label><br />
+        <input type="text" id="flagName" name="flagName" /><br />
+        <button id="btn-submit" type="submit">potvrdit</button>
+        <p id="vyhodnoceni"></p>
+      </form>
+
+    </div>
+  <script src="main.js"></script>
+</div>
+
+
+      
 
 </body>
 
