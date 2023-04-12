@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Samíkovo Procvičování</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Samíkovo Procvičování</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="main.js" type="text/javascript" defer></script>
+
 </head>
+
 <body>
-    
-</body>
-    <div class="quizz">
-    <h1>Jaká je toto vlajka?</h1>
-    
+  <div>
 
-    <img src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300">
+    <!-- <div id="home-box">
+      <h3>Kvíz na vlajky zemí</h3>
+      <button onclick="hideCard()" class="btn-start"> začít hrát </button>
 
-    
-    <form class="center-form">
-        <label for="flagName">Zadejte název vlajky</label><br>
-        <input type="text" id="flagName" name="flagName"><br>
-        
+    </div> -->
+
+
+
+    <div class="quiz">
+      <h3>Jaká je toto vlajka?</h3>
+
+      <img src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300" id="flagImg" alt="flag" />
+
+      <form class="center-form" id="mainForm">
+
+        <label for="flagName">Zadejte název vlajky: </label><br />
+        <input type="text" id="flagName" name="flagName" /><br />
+        <button id="btn-submit" type="submit">potvrdit</button>
+        <button onclick="setFlag()" type="button">skip</button>
+        <p id="vyhodnoceni"></p>
       </form>
-    
-    
-    <button class="btn-potvrdit">
-        potvrdit
-    </button>
+
     </div>
+</div>
+
+
+      
+
+</body>
+
 </html>

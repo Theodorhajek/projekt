@@ -1,32 +1,40 @@
-h1{
-    color: blue;
-    text-align: center;
+body {
+  background-color: #468189;
 }
-.quizz {
-    display: grid;
-    place-items: center;
-    border: yellow;
-}
+#home-box {
+  box-sizing: border-box;
+  outline: none;
+  background-color: #f4e9cd;
+  max-width: 400px;
+  border-radius: 10px;
 
-img{
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.center-form{
-    
-justify-content: center;
-display: flex;
-margin: 40px 50px;
-padding: 30px;
+#home-box button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #9dbebb;
 }
 
+.quiz {
+  /* display: none; */
 
-.btn-potvrdit button{
-    align-self: center;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #f4e9cd;
+  max-width: 400px;
+  border-radius: 10px;
+
+  margin: 50px auto;
+  padding: 20px;
+}
+.quiz form {
+  padding: 10px;
 }
 
-.top{
-    background-color: whitesmoke ;
+.quiz img {
+  width: 100%;
 }
