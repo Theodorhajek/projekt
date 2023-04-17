@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Samíkovo Procvičování</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js" type="text/javascript" defer></script>
+  </head>
 
-<head>
-  <title>Samíkovo Procvičování</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="main.js" type="text/javascript" defer></script>
-
-</head>
-
-<body>
-  <div>
-
-    <!-- <div id="home-box">
+  <body>
+    <div>
+      <!-- <div id="home-box">
       <h3>Kvíz na vlajky zemí</h3>
       <button onclick="hideCard()" class="btn-start"> začít hrát </button>
 
     </div> -->
 
+      <div class="quiz">
+        <div class="quizTop">
+          <h3>Guess the country of the flag</h3>
+        </div>
+        <div>
+          <img
+            src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300"
+            id="flagImg"
+            alt="flag"
+          />
+        </div>
 
-
-    <div class="quiz">
-      <h3>Jaká je toto vlajka?</h3>
-
-      <img src="https://www.vlajky.eu/vlajky/846/cz.jpg?w=200&h=300" id="flagImg" alt="flag" />
-
-      <form class="center-form" id="mainForm">
-
-        <label for="flagName">Zadejte název vlajky: </label><br />
-        <input type="text" id="flagName" name="flagName" /><br />
-        <button id="btn-submit" type="submit">potvrdit</button>
-        <button onclick="setFlag()" type="button">skip</button>
-        <p id="vyhodnoceni"></p>
-      </form>
-
+        <form class="centerForm" id="mainForm">
+          <label for="flagName">Enter the country of the flag: </label><br />
+          <input type="text" id="flagName" name="flagName" /><br />
+          <button class="btn" id="btn-submit" type="submit">submit</button>
+          <button class="btn" onclick="setFlag()" type="button">skip</button>
+          <p id="vyhodnoceni"></p>
+        </form>
+      </div>
     </div>
-</div>
-
-
-      
-
-</body>
-
+  </body>
 </html>
