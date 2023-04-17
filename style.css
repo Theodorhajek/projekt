@@ -85,3 +85,16 @@ body {
   ;
   transition: 0.25s;
 }
+
+#score{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+  background-color: #3aafa9;
+
+  
+}

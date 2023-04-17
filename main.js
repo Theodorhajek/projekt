@@ -2,10 +2,13 @@ const form = document.getElementById("mainForm");
 const msgBox = document.getElementById("vyhodnoceni");
 const flagImg = document.getElementById("flagImg");
 const userInput = document.getElementById("flagName");
+const score = document.getElementById("score")
 
 
 // name of the picked country
 let answer = "";
+let counter = -1;
+let scoreCount = 0;
 
 const countries = {
   europe: [
@@ -200,6 +203,7 @@ const countries = {
   ],
 };
 
+
 function getCountry() {
   const newCountry = countries.europe[Math.floor(Math.random() * countries.europe.length)];
   if ((newCountry.name === answer)) {
@@ -217,22 +221,31 @@ function getCountry() {
 
 function setFlag() {
   const newCountry = getCountry();
+  lastCountry = newCountry;
   answer = newCountry.name;
   flagImg.src = `https://flagcdn.com/${newCountry.code}.svg`;
   msgBox.innerHTML = ""
   userInput.value = ""
+  counter++
+  score.innerHTML = `Score: ${scoreCount} / ${counter}`
+  console.log(counter);
 }
 
 setFlag();
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  // console.log("ok", answer);
+
   if (userInput.value.toLowerCase() === answer) {
-    msgBox.innerHTML = "správně!";
+    msgBox.innerHTML = "That is right!";
+    scoreCount++
+    
     setFlag();
   } else {
-    msgBox.innerHTML = "odpověď není správná!";
+    msgBox.innerHTML = `Wrong answer! <br> The right answer is: ${answer.charAt(0).toUpperCase() + answer.slice(1)}.`;
     console.log(answer);
   }
+  
 });
+
+console.log(lastCountry);
