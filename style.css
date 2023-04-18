@@ -21,7 +21,7 @@ body {
 }
 
 .quiz {
-  /* display: none; */
+  display: none;
 
   box-sizing: border-box;
   outline: none;
