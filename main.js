@@ -13,7 +13,6 @@ let wrongAnswer = false;
 let pickedContinents = [];
 let finalContinent = "";
 
-
 const countries = {
   asia: [
     {
@@ -424,12 +423,12 @@ const countries = {
 
 function getContinent() {
   let continent = Math.floor(Math.random() * pickedContinents.length);
-  return pickedContinents[continent]
+  return pickedContinents[continent];
 }
 
 function getCountry() {
-  const continent = getContinent()
-  const newCountry = countries[continent][Math.floor(Math.random() * continent.length)];
+  const continent = getContinent();
+  const newCountry = countries[continent][Math.floor(Math.random() * countries[continent].length)];
   if (newCountry.name === answer) {
     return getCountry();
   }
@@ -438,8 +437,7 @@ function getCountry() {
 
 function hideCard() {
   userContinentPick.forEach((checkbox) => {
-  if (checkbox.checked)
-    pickedContinents.push(checkbox.id);
+    if (checkbox.checked) pickedContinents.push(checkbox.id);
   });
   let x = document.getElementById("home-box");
   let y = document.querySelector(".quiz");
@@ -474,9 +472,7 @@ form.addEventListener("submit", function (e) {
     }
     setFlag();
   } else {
-    msgBox.innerHTML = `Wrong answer! <br> The right answer is: ${
-      answer.charAt(0).toUpperCase() + answer.slice(1)
-    }.`;
+    msgBox.innerHTML = `Wrong answer! <br> The right answer is: ${answer.charAt(0).toUpperCase() + answer.slice(1)}.`;
     console.log(answer);
     wrongAnswer = true;
   }
