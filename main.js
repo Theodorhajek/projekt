@@ -11,11 +11,8 @@ let counter = -1;
 let scoreCount = 0;
 let wrongAnswer = false;
 let pickedContinents = [];
-let finalContinent = x;
+let finalContinent = "";
 
-userContinentPick.forEach((checkbox) => {
-  pickedContinents.push(checkbox.id);
-});
 
 const countries = {
   asia: [
@@ -425,29 +422,14 @@ const countries = {
   ],
 };
 
-function getRandomContinent() {
-  const continent = Math.floor(Math.random() * 2);
-
-  if (continent === 1) {
-    finalContinent = countries.europe;
-  } else {
-    finalContinent = countries.asia;
-  }
-}
-
 function getContinent() {
-  if (pickedContinents.includes(europe, asia)) {
-    getRandomContinent();
-  } else if (pickedContinents.includes(europe)) {
-    finalContinent = countries.europe;
-  } else if (pickedContinents.includes(asia)) {
-    finalContinent = countries.asia;
-  }
+  let continent = Math.floor(Math.random() * pickedContinents.length);
+  return pickedContinents[continent]
 }
 
 function getCountry() {
-  console.log("conrinent:", finalContinent);
-  const newCountry = finalContinent[Math.floor(Math.random() * countries.europe.length)];
+  const continent = getContinent()
+  const newCountry = countries[continent][Math.floor(Math.random() * continent.length)];
   if (newCountry.name === answer) {
     return getCountry();
   }
@@ -455,29 +437,27 @@ function getCountry() {
 }
 
 function hideCard() {
+  userContinentPick.forEach((checkbox) => {
+  if (checkbox.checked)
+    pickedContinents.push(checkbox.id);
+  });
   let x = document.getElementById("home-box");
   let y = document.querySelector(".quiz");
   x.style.display = "none";
   y.style.display = "block";
+  setFlag();
 }
 
 function setFlag() {
-
-  getContinent()
-
   const newCountry = getCountry();
-
   answer = newCountry.name;
   flagImg.src = `https://flagcdn.com/${newCountry.code}.svg`;
   msgBox.innerHTML = "";
   userInput.value = "";
   counter++;
   score.innerHTML = `Score: ${scoreCount} / ${counter}`;
-  console.log(counter);
   wrongAnswer = false;
 }
-
-setFlag();
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
